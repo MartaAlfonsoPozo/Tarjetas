@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tarjetas_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            min-height: 100%;
+        }
+        img{
+            width:100%; 
+        }
+        body{
+            font-family: "Georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(380deg,grey,white);
+            color: grey;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 2em 4em;
+        }
+        .disenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px black;
+        }
+        .disenyador_img{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+            background: grey;
+        }
+        .disenyador_img img{
+            height: 100%;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            object-position: top;
+            filter: grayscale(100%);
+            mix-blend-mode: hard-light;
+        }
+        .disenyador:last-child .disenyador_img img{
+            object-position: left;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .disenyador_contenido{
+            flex-grow: 1;
+            text-align: justify;
+            hyphens: auto;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+        }
+        footer{
+            background: grey;
+            color:white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 10px 10px;
+            padding: 1em 1em 0.5em 1em;
+        }
+        @media (max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="disenyador">
+       <div class="disenyador_img">
+           <img src="img/chipkidd.jpg" alt="Chip Kidd">
+       </div> 
+       
+       <header>
+           <h3>Chip Kidd</h3>
+           <span>1964</span>
+       </header>
+       <p class="disenyador_contenido">
+           Charles Kidd (born 1964) is an American graphic designer, best known for his book covers. Based in New York city, Kidd has become one of the most famous book cover designers to date.Born in Shillington in Berks County, Pennsylvania, Kidd grew up being fascinated and heavily inspired by American popular culture. Comic books were his gateway into graphic design, with Batman and Superman populating some of his earliest childhood memories. Kidd attended Pennsylvania State University, where he graduated in 1986 with a degree in graphic design.
+       </p>
+       <footer class="disenyador_pie">
+           Throughout his career, Kidd has been a graphic designer, book designer, editor, author, lecturer and musician. According to Graphic Design: American Two, he has been credited with “helping to spawn a revolution in the art of America book packaging in the last ten years.”  One of the most consistent characteristics of Kidd’s style is the fact that his book covers don’t carry one signature look, as he states: “A signature look is crippling… .” 
+       </footer>
+        
+    </div>
+    <div>
+       
+        <div class="disenyador">
+            <div class="disenyador_img">
+                <img src="img/Debbie_Millman.jpg" alt="Debbie Millman">
+            </div>
+        <header>
+            <h3>Debbie Millman</h3>
+            <span>1962</span>
+        </header>
+        <p class="disenyador_contenido">
+            Debbie Millman is an American writer, educator, artist, curator, and designer who is best known as the host of the podcast Design Matters. She has authored six books and is the President Emeritus of the American Institute of Graphic Arts (AIGA) and chair and co-founder of the Masters in Branding Program at the School of Visual Arts in New York City. She was previously the editorial and creative director of Print magazine.Millman studied at the University at Albany, SUNY for her undergraduate Bachelor of Arts degree. She majored in English with a minor in Russian literature, graduating in 1983. 
+
+        </p>
+        <footer class="disenyador_pie">
+            Millman helped grow the company from 15 employees to 150, and along with her partners, sold the company to Omnicon in 2008.From 1993 to 2005, Millman was the off-staff creative director of HOT 97 in New York City, where she worked with Emmis Broadcasting general manager Judy Ellis and Promotion Director Rocco Macri to turn the dance music radio station into a hip-hop radio station. Millman created the HOT 97 logo in 1994 and then redesigned it again in 1999.
+        </footer>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
